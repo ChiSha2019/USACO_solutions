@@ -1,19 +1,18 @@
 package bronze.photoShootJan2020;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 //dont solve permutations of a
 //Time Complexity : O(n^2)
 public class PhotoShoot {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/photoShootJan2020/10.in"));
-        //BufferedWriter bw;
+        Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/photoShootJan2020/2.in"));
+        //Scanner sc = new Scanner(new File("photoshoot.in"));
+        BufferedWriter bw;
         //bw = new BufferedWriter(new FileWriter("src/main/java/bronze/photoShoot2020/myPhotoShoot.out"));
-
+        bw = new BufferedWriter(new FileWriter("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/photoShootJan2020/photoshoot.out"));
+        PrintWriter pw = new PrintWriter(bw);
         int numA = sc.nextInt();
         int[] b = new int[numA];
         int index = 0;
@@ -37,7 +36,7 @@ public class PhotoShoot {
             setA.add(i);
             for (int j = 0; j < numA-1; j++) {
                 nextNum = b[j] - nextNum;
-                System.out.println(setA);
+                //System.out.println(setA);
                 if (setA.contains(nextNum) || nextNum <= 0) {
                     isGood = false;
                     setA.clear();
@@ -47,7 +46,9 @@ public class PhotoShoot {
                 }
             }
             if (isGood) {
-                System.out.println(setA);
+                //System.out.println(setA);
+                //bw.write(setA);
+                pw.println(setA);
                 break;
             }
         }
