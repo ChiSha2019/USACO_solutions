@@ -1,4 +1,4 @@
-//package bronze.dont_be_last_2017;
+package bronze.dont_be_last_2017;
 
 import java.io.*;
 import java.util.HashMap;
