@@ -1,4 +1,4 @@
-package bronze.swapitySwap2020;
+//package bronze.swapitySwap2020;
 
 import java.io.*;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 //find the remainder of revering time over the period
 public class SwapitySwap {
     public static void main(String[] args) throws IOException {
-        //Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/swapitySwap2020/swap_bronze_feb20/3.in"));
+        //Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/swapitySwap2020/swap_bronze_feb20/1.in"));
         Scanner sc = new Scanner(new File("swap.in"));
         //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/swapitySwap2020/swap_bronze_feb20/myOut.out")));
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("swap.out")));

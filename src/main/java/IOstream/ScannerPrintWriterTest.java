@@ -8,8 +8,9 @@ import java.util.Scanner;
 
 public class ScannerPrintWriterTest {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.next();
+        //Scanner sc = new Scanner(System.in);
+        // str = sc.next();
+        String str = "sOMETHING TO pRINT";
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("src/main/java/IOstream/fileWriterOutput.out")));
         pw.print(str);
         pw.close();

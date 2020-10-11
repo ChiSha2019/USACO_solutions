@@ -16,6 +16,7 @@ public class PhotoShoot {
         int numA = sc.nextInt();
         int[] b = new int[numA];
         int index = 0;
+
         while (sc.hasNext()) {
             b[index] = sc.nextInt();
             index++;
@@ -28,9 +29,10 @@ public class PhotoShoot {
         then check if nextNum is already in the set
         */
 
-        Set setA = new LinkedHashSet<Integer>();
+        Set setA = new LinkedHashSet<Integer>(); //linkedHashSet is used to preserve the order
 
         for (int i = 1; i <= numA; i++) {
+            //isGood flag is used to check whether we have traversed until the end of the list
             boolean isGood = true;
             int nextNum = i;
             setA.add(i);

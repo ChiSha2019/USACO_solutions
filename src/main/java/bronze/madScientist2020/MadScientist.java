@@ -12,14 +12,14 @@ public class MadScientist {
         int length = sc.nextInt();
         String strA = sc.next();
         String strB = sc.next();
-        boolean same = true;
+        boolean wereLastCharsSame = true;
         int count =0;
         for(int i=0; i<length;i++){
-
-            if (strA.charAt(i) != strB.charAt(i) && same){
+            //check the starting of a new flipped block
+            if (strA.charAt(i) != strB.charAt(i) && wereLastCharsSame){
                     count ++;
                 }
-            same = strA.charAt(i) == strB.charAt(i);
+            wereLastCharsSame = strA.charAt(i) == strB.charAt(i);
         }
         pw.println(count);
         pw.close();

@@ -21,6 +21,7 @@ public class Triangles {
         for (int i = 0; i < numPoint - 2; i++)
             for (int j = i + 1; j < numPoint - 1; j++)
                 for (int k = j + 1; k < numPoint; k++) {
+                    //check if it's a right triangle
                     if((x[i] == x[j] || x[i] == x[k] || x[j] == x[k]) && (y[i] == y[j] || y[i] == y[k] || y[j] == y[k])) {
                         int newArea = area(x[i], y[i], x[j], y[j], x[k], y[k]);
                         if (newArea > sum) {
