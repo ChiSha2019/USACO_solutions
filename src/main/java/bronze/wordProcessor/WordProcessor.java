@@ -28,11 +28,10 @@ public class WordProcessor {
                 pw.print(words[i]);
                 currentLength += words[i].length();
             }
-            if (i<numWord && words[i+1].length() + currentLength <= maxCharLength){
-                pw.write(" ");
+            if (i<numWord-1 && words[i+1].length() + currentLength <= maxCharLength){
+                pw.print(" ");
             }
         }
         pw.close();
-        
     }
 }
