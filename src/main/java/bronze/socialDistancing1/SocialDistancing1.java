@@ -21,12 +21,13 @@ public class SocialDistancing1 {
     static int largestGapStart = -1;
 
     public static void main(String[] args) throws IOException {
-        //Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/socialDistancing1/15.in"));
-        Scanner sc = new Scanner(new File("socdist1.in"));
+        Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/socialDistancing1/1.in"));
+        //Scanner sc = new Scanner(new File("socdist1.in"));
         //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/socialDistancing1/myout.out")));
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("socdist1.out")));
         int stallNum = sc.nextInt();
         String stallString = sc.next();
+
         char[] stallCharArray = stallString.toCharArray();
         int answer = 0;
         int largestGap = findLargestInteriorGap(stallCharArray);
