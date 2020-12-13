@@ -1,4 +1,4 @@
-package bronze.CowtactTracing;
+//package bronze.CowtactTracing;
 
 /*
  * Try all possible combination of patient zero's position and Value of K
@@ -17,10 +17,10 @@ import java.util.Scanner;
 
 public class CowtactTracing {
     public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/CowtactTracing/1.in"));
-        //Scanner sc = new Scanner(new File("tracing.in"));
-        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/CowtactTracing/TRACING.out")));
-        //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("tracing.out")));
+        //Scanner sc = new Scanner(new File("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/CowtactTracing/1.in"));
+        Scanner sc = new Scanner(new File("tracing.in"));
+        //PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("/Users/qixia/IdeaProjects/USACO/src/main/java/bronze/CowtactTracing/TRACING.out")));
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("tracing.out")));
         int N = sc.nextInt();
         int T = sc.nextInt();
         String line3 = sc.next();
@@ -83,6 +83,7 @@ public class CowtactTracing {
         else
             upper_K_result = Integer.toString(upper_K);
         pw.print(num_patientZero + " " + lower_K + " " + upper_K_result);
+        pw.close();
     }
 
     static boolean consistentWithData(int N, int patientZeroPosition, int K, int[] cowx, int[] cowy, boolean[] cow_infected_final_state) {
