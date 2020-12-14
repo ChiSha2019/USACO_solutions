@@ -1,4 +1,4 @@
-//package bronze.cowGym2019;
+package bronze.cowGym2019;
 
 import java.io.*;
 import java.util.Scanner;
@@ -18,11 +18,6 @@ public class CowGymDemo {
         PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("gymnastics.out")));
         int K = sc.nextInt();
         int N = sc.nextInt();
-        int numPair = N * (N - 1) / 2;
-
-        boolean[] pairConsistency = new boolean[numPair]; //False to be consistent
-
-
         int[][] data = new int[K][N];
 
         for (int i = 0; i < K; i++)
