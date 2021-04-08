@@ -7,6 +7,7 @@ public class detect_cycle {
         DisjointSet ds = new DisjointSet(6);
 
         for (Edge e: edgeList){
+            //check if the 2 nodes of this edge are already in a same set
             if(ds.find(e.node1) == ds.find(e.node2)){
                 System.out.println("cycle detected with edge:  " + e.node1 + e.node2);
                 return;
