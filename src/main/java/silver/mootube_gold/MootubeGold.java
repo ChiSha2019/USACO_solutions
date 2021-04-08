@@ -1,9 +1,13 @@
 package silver.mootube_gold;
 
-import javax.management.Query;
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
+
+// use Disjoint union set
+// sort query according to their weight, so that
+// we can use all the edges from the previous query
+// and add in any new edges that are now at least as large as the threshold we're querying against.
 
 public class MootubeGold {
     public static void main(String[] args) throws IOException {
@@ -37,6 +41,7 @@ public class MootubeGold {
             int start = Integer.parseInt(st.nextToken())-1;
             queries[query] = new Query(start, threshold, query);
         }
+
         //sort query according to their weight, so that
         // we can use all the edges from the previous query
         // and add in any new edges that are now at least as large as the threshold we're querying against.
