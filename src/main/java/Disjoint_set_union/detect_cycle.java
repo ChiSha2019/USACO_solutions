@@ -46,5 +46,4 @@ class DisjointSet{
         if (a != b)
             parent[b] = a;
     }
-
 }
