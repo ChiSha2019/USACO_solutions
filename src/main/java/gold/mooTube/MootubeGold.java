@@ -1,4 +1,4 @@
-package silver.mootube_gold;
+package gold.mooTube;
 
 import java.io.*;
 import java.util.Arrays;
