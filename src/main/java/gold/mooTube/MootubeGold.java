@@ -27,10 +27,10 @@ public class MootubeGold {
         Arrays.sort(edges);
 
         par = new int[n];
-        sz = new int[n]; //setsize, 在 merge中被update
+        setSize = new int[n]; //size of each set, with index as representative of the set, 在 merge中被update
         for(int i = 0; i < n; i++) {
             par[i] = i;
-            sz[i] = 1;
+            setSize[i] = 1;
         }
 
         Query[] queries = new Query[q];
@@ -63,9 +63,11 @@ public class MootubeGold {
     }
 
     static int[] par;
-    static int[] sz;
+    static int[] setSize;
+
+    //find size of a set, with input any node of that set
     public static int sizeOf(int x) {
-        return sz[find(x)];
+        return setSize[find(x)];
     }
     public static int find(int x) {
         return par[x] == x ? x : (par[x] = find(par[x]));
@@ -73,7 +75,7 @@ public class MootubeGold {
     public static void merge(int x, int y) {
         int fx = find(x);
         int fy = find(y);
-        sz[fy] += sz[fx];
+        setSize[fy] += setSize[fx];
         par[fx] = fy;
     }
 
