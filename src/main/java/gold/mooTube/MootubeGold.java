@@ -1,4 +1,4 @@
-package gold.mooTube;
+//package gold.mooTube;
 
 import java.io.*;
 import java.util.Arrays;
@@ -24,6 +24,9 @@ public class MootubeGold {
             int w = Integer.parseInt(st.nextToken());
             edges[i] = new Edge(x, y, w);
         }
+
+        //why sort the edges according to their weight?
+        //because later we will compare the weight with query! 双指针法
         Arrays.sort(edges);
 
         par = new int[n];

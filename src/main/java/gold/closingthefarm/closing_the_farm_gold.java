@@ -48,7 +48,7 @@ public class closing_the_farm_gold {
 
             for (Integer adj_n : adjList[node_to_add]) {
                 if (visited[node_to_add] && visited[adj_n] && ds.find(node_to_add) != ds.find(adj_n)) {
-                    ds.union_sets(node_to_add, adj_n);
+                    ds.union_sets_ranking(node_to_add, adj_n);
                     num_of_disjointset--;
                 }
             }
