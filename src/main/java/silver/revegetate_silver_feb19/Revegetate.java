@@ -8,7 +8,7 @@
 * to write in binar is 100...setnumber of zero...000
 * */
 
-package silver.revegetate_silver_feb19;
+//package silver.revegetate_silver_feb19;
 
 import java.util.*;
 import java.io.*;
